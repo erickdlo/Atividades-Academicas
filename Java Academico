@@ -1,0 +1,17 @@
+/*Operador Condicional Ternario - Testar se o número é par ou impar*/
+package javaapplication3;
+import java.util.Scanner;
+public class JavaApplication3 {
+    public static void main(String[] args) {
+        Scanner leia=new Scanner(System.in);
+        int a;
+        System.out.println("Digite um número: ");
+        a=leia.nextInt();
+        System.out.println(par(a));
+    }
+    public static String par(int a){
+        return a%2==0?"PAR":"IMPAR";
+    
+    }    
+}
+
