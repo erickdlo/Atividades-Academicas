@@ -1,0 +1,43 @@
+/*teste: https://www.onlinegdb.com/online_python_debugger */
+/*Provas UNA Contagem*/
+/*Faça um programa que solicite dez números ao usuário, depois disso, exiba todos números pares*/
+numeros=[]
+for i in range(10):    
+	num=int(input("Digite um numero: ")) 
+	numeros.append(num)    
+pares=list (filter(lambda a:a%2==0, numeros))
+print ("Numeros Pares: ",pares)
+
+/*Faça um programa que receba 5 números e após mostre o menor na tela, usando lambda e alguma função de alta ordem.*/
+from functools import reduce
+numeros=[]
+for i in range(5):    
+	num=int(input("Digite um numero: ")) 
+	numeros.append(num)    
+menor=reduce(lambda x,y:x if(x<y) else y,numeros)
+print ("O menor numero digitado: ",menor)
+
+/*Faça um programa que receba um número e mostre par ou impar, usando lambda.*/
+num=int(input("Digite um numero: ")) 
+valor=lambda x: "Par" if(x%2==0) else "Impar"
+print(valor(num))
+
+/*Faça um programa que solicite dois números ao usuário e exiba a multiplicação deles. A multiplicação deve ser calculada em uma função lambda.*/
+numero1=int(input("Digite um numero "))
+numero2=int(input("Digite outro numero "))
+multiplicaLambda=lambda numero1, numero2: numero1*numero2
+print("A multiplicação dos numeros: ",multiplicaLambda(numero1,numero2))
+
+/*Faça um programa que solicite o nome do usuário e a idade do usuário, depois disso exiba a mensagem: *"{nome} possui {idade} anos."*. Esta mensagem deve ser escrita em uma função lambda.*/
+nome=input("Digite seu nome ")
+idade=int(input("Digite sua idade "))
+pessoa=lambda nome,idade:print(nome,"possui", idade, "anos")
+pessoa(nome,idade)
+
+/*Faça um programa que solicite cinco números ao usuário, depois disso, exiba apenas os números maiores que 10. Utilize a função ‘filter’ para fazer isso.*/
+numeros=[]
+for i in range(5):    
+	num=int(input("Digite um numero: ")) 
+	numeros.append(num)    
+maiores=list (filter(lambda a:a>10, numeros))
+print ("Numeros maiores que 10: ",maiores)
